@@ -34,6 +34,31 @@
             margin-bottom: 60px;
         }
 
+        .site-brand {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .profile-image-small {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: white;
+            font-weight: 600;
+            border: 2px solid rgba(148, 163, 184, 0.3);
+        }
+
+        .site-title-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
         .site-title {
             font-size: 1.8rem;
             font-weight: 700;
@@ -75,47 +100,16 @@
             border: 1px solid rgba(148, 163, 184, 0.1);
         }
 
-        .profile-card {
+        .links-card {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .profile-image {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            margin-bottom: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
-            color: white;
-            font-weight: 600;
-        }
-
-        .profile-name {
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            color: #fff;
-        }
-
-        .profile-title {
-            font-size: 1rem;
-            color: #94a3b8;
-            margin-bottom: 30px;
-            line-height: 1.5;
         }
 
         .button-group {
             display: flex;
             gap: 15px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
             flex-wrap: wrap;
-            justify-content: center;
         }
 
         .btn {
@@ -150,7 +144,8 @@
         .social-links {
             display: flex;
             gap: 15px;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
         }
 
         .social-links a {
@@ -183,7 +178,6 @@
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            justify-content: center;
         }
 
         .tag {
@@ -288,7 +282,7 @@
                 grid-template-columns: 1fr 1fr;
             }
             
-            .profile-card {
+            .links-card {
                 grid-column: 1 / -1;
             }
         }
@@ -302,6 +296,11 @@
                 flex-direction: column;
                 text-align: center;
                 gap: 20px;
+            }
+
+            .site-brand {
+                flex-direction: column;
+                text-align: center;
             }
 
             nav {
@@ -319,9 +318,12 @@
 <body>
     <div class="container">
         <header>
-            <div>
-                <div class="site-title">Rongtian Tong</div>
-                <div class="site-subtitle">Research Website</div>
+            <div class="site-brand">
+                <div class="profile-image-small">RT</div>
+                <div class="site-title-wrapper">
+                    <div class="site-title">Rongtian Tong</div>
+                    <div class="site-subtitle">Research Website</div>
+                </div>
             </div>
             <nav>
                 <a href="#home">Home</a>
@@ -330,28 +332,14 @@
             </nav>
         </header>
 
-        <div class="main-grid">
-            <!-- Profile Card -->
-            <div class="card profile-card">
-                <div class="profile-image">RT</div>
-                
-                <h1 class="profile-name">Rongtian Tong</h1>
-                
-                <p class="profile-title">
-                    Cross-cultural Psychology, International Studies, Intercultural Communication<br>
-                    University of Washington
-                </p>
-
+            <div class="main-grid">
+            <!-- Links and Info Card -->
+            <div class="card links-card">
                 <div class="button-group">
-                    <a href="#" class="btn btn-primary">Publications</a>
-                    <a href="#" class="btn btn-secondary">CV Preview</a>
+                    <a href="https://scholar.google.com/citations?user=8jNTcJoAAAAJ&hl=en" target="_blank" class="btn btn-primary">Google Scholar</a>
+                    <a href="https://www.linkedin.com/in/tongrongtian/" target="_blank" class="btn btn-secondary">LinkedIn</a>
+                    <a href="https://x.com/Tongrongtian" target="_blank" class="btn btn-secondary">X (Twitter)</a>
                     <a href="mailto:your.email@uw.edu" class="btn btn-secondary">Email</a>
-                </div>
-
-                <div class="social-links">
-                    <a href="#">Google Scholar</a>
-                    <a href="#">LinkedIn</a>
-                    <a href="#">X (Twitter)</a>
                 </div>
 
                 <div class="focus-section">
@@ -360,6 +348,7 @@
                         <span class="tag">cross-cultural</span>
                         <span class="tag">psychology</span>
                         <span class="tag">communication</span>
+                        <span class="tag">international studies</span>
                     </div>
                 </div>
 
@@ -368,6 +357,7 @@
                     <div class="focus-tags">
                         <span class="tag">experiments</span>
                         <span class="tag">surveys</span>
+                        <span class="tag">qualitative research</span>
                     </div>
                 </div>
             </div>
