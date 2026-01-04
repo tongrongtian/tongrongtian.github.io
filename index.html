@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rongtian Tong - Research Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #e2e8f0;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            margin-bottom: 60px;
+        }
+
+        .site-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .site-subtitle {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            font-weight: 400;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fff;
+        }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        /* Cards */
+        .card {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .profile-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            font-weight: 600;
+        }
+
+        .profile-name {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .profile-title {
+            font-size: 1rem;
+            color: #94a3b8;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #a78bfa 0%, #8b5cf6 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(148, 163, 184, 0.1);
+            color: #cbd5e1;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(148, 163, 184, 0.2);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .social-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #a78bfa;
+        }
+
+        .focus-section {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .section-label {
+            font-size: 0.75rem;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .focus-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+        }
+
+        .tag {
+            background: rgba(139, 92, 246, 0.1);
+            color: #c4b5fd;
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+        }
+
+        /* Research News */
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: #fff;
+        }
+
+        .news-item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .news-date {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-bottom: 8px;
+        }
+
+        .news-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+
+        .badge-award {
+            background: rgba(251, 191, 36, 0.2);
+            color: #fbbf24;
+        }
+
+        .badge-publication {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+        }
+
+        .news-content {
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Publications */
+        .pub-item {
+            margin-bottom: 20px;
+        }
+
+        .pub-title {
+            font-size: 1rem;
+            color: #e2e8f0;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .pub-venue {
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        .pub-venue-name {
+            color: #a78bfa;
+            font-style: italic;
+        }
+
+        /* About Section */
+        .about-section {
+            grid-column: 1 / -1;
+        }
+
+        .about-content {
+            font-size: 1rem;
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .about-content p {
+            margin-bottom: 15px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .main-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .profile-card {
+                grid-column: 1 / -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            nav {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav a {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <div class="site-title">Rongtian Tong</div>
+                <div class="site-subtitle">Research Website</div>
+            </div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#research">Research</a>
+                <a href="#cv">CV</a>
+            </nav>
+        </header>
+
+        <div class="main-grid">
+            <!-- Profile Card -->
+            <div class="card profile-card">
+                <div class="profile-image">RT</div>
+                
+                <h1 class="profile-name">Rongtian Tong</h1>
+                
+                <p class="profile-title">
+                    Cross-cultural Psychology, International Studies, Intercultural Communication<br>
+                    University of Washington
+                </p>
+
+                <div class="button-group">
+                    <a href="#" class="btn btn-primary">Publications</a>
+                    <a href="#" class="btn btn-secondary">CV Preview</a>
+                    <a href="mailto:your.email@uw.edu" class="btn btn-secondary">Email</a>
+                </div>
+
+                <div class="social-links">
+                    <a href="#">Google Scholar</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">X (Twitter)</a>
+                </div>
+
+                <div class="focus-section">
+                    <div class="section-label">Focus</div>
+                    <div class="focus-tags">
+                        <span class="tag">cross-cultural</span>
+                        <span class="tag">psychology</span>
+                        <span class="tag">communication</span>
+                    </div>
+                </div>
+
+                <div class="focus-section">
+                    <div class="section-label">Methods</div>
+                    <div class="focus-tags">
+                        <span class="tag">experiments</span>
+                        <span class="tag">surveys</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research News -->
+            <div class="card">
+                <h2 class="card-title">Research News</h2>
+                
+                <div class="news-item">
+                    <div class="news-date">
+                        Jan 2026
+                        <span class="news-badge badge-publication">PUBLICATION</span>
+                    </div>
+                    <div class="news-content">
+                        New publication on cross-cultural communication patterns in multicultural environments.
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-date">
+                        Dec 2025
+                        <span class="news-badge badge-award">AWARD</span>
+                    </div>
+                    <div class="news-content">
+                        Received the Excellence in Research Award from the Department of Psychology.
+                    </div>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-date">Sep 2025</div>
+                    <div class="news-content">
+                        Presented research findings at the International Conference on Intercultural Communication.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Selected Publications -->
+            <div class="card">
+                <h2 class="card-title">Selected Publications</h2>
+                
+                <div class="pub-item">
+                    <div class="pub-title">Cultural Identity and Communication Styles</div>
+                    <div class="pub-venue">
+                        <span class="pub-venue-name">Journal of Cross-Cultural Psychology</span>, 2025
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Intercultural Competence in Global Teams</div>
+                    <div class="pub-venue">
+                        <span class="pub-venue-name">International Studies Quarterly</span>, 2024
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Communication Patterns in Multicultural Settings</div>
+                    <div class="pub-venue">
+                        <span class="pub-venue-name">Communication Research</span>, 2024
+                    </div>
+                </div>
+
+                <div class="pub-item">
+                    <div class="pub-title">Understanding Cultural Differences</div>
+                    <div class="pub-venue">
+                        <span class="pub-venue-name">Psychological Science</span>, 2023
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Me Section -->
+        <div class="card about-section">
+            <h2 class="card-title">About Me</h2>
+            <div class="about-content">
+                <p>
+                    I am a researcher at the University of Washington focusing on cross-cultural psychology, international studies, and intercultural communication. My work explores how cultural backgrounds shape communication patterns, identity formation, and interpersonal relationships in diverse settings.
+                </p>
+                <p>
+                    My research employs both quantitative and qualitative methods to understand the complexities of intercultural interactions. I am particularly interested in how individuals navigate multiple cultural identities and develop intercultural competence in increasingly globalized environments.
+                </p>
+                <p>
+                    Through my work, I aim to contribute to both theoretical understanding and practical applications that can help individuals and organizations thrive in multicultural contexts.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
