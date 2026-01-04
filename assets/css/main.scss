@@ -1,0 +1,32 @@
+---
+---
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, serif;
+  background: #0e1117;
+  color: #e6e6e6;
+  margin: 0;
+}
+
+.grid {
+  max-width: 1000px;
+  margin: 60px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.card {
+  background: #161b22;
+  padding: 28px;
+  border-radius: 12px;
+}
+
+a {
+  color: #9a7cff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
