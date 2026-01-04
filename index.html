@@ -30,8 +30,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
-            margin-bottom: 60px;
+            padding: 15px 0;
+            margin-bottom: 40px;
         }
 
         .site-brand {
@@ -87,8 +87,8 @@
         .main-grid {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
-            gap: 30px;
-            margin-bottom: 40px;
+            gap: 25px;
+            margin-bottom: 30px;
         }
 
         /* Cards */
@@ -96,7 +96,7 @@
             background: rgba(30, 41, 59, 0.6);
             backdrop-filter: blur(10px);
             border-radius: 16px;
-            padding: 40px;
+            padding: 25px;
             border: 1px solid rgba(148, 163, 184, 0.1);
         }
 
@@ -107,18 +107,19 @@
 
         .button-group {
             display: flex;
-            gap: 15px;
-            margin-bottom: 30px;
-            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: nowrap;
         }
 
         .btn {
-            padding: 10px 24px;
+            padding: 8px 18px;
             border-radius: 8px;
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             transition: all 0.3s;
             font-weight: 500;
+            white-space: nowrap;
         }
 
         .btn-primary {
@@ -160,8 +161,8 @@
         }
 
         .focus-section {
-            margin-top: 20px;
-            padding-top: 20px;
+            margin-top: 15px;
+            padding-top: 15px;
             border-top: 1px solid rgba(148, 163, 184, 0.1);
         }
 
@@ -170,7 +171,7 @@
             color: #64748b;
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             font-weight: 600;
         }
 
@@ -192,13 +193,13 @@
         .card-title {
             font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             color: #fff;
         }
 
         .news-item {
-            margin-bottom: 25px;
-            padding-bottom: 25px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
             border-bottom: 1px solid rgba(148, 163, 184, 0.1);
         }
 
@@ -241,7 +242,7 @@
 
         /* Publications */
         .pub-item {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .pub-title {
@@ -335,29 +336,21 @@
             <div class="main-grid">
             <!-- Links and Info Card -->
             <div class="card links-card">
+                <div class="section-label">Links</div>
                 <div class="button-group">
                     <a href="https://scholar.google.com/citations?user=8jNTcJoAAAAJ&hl=en" target="_blank" class="btn btn-primary">Google Scholar</a>
                     <a href="https://www.linkedin.com/in/tongrongtian/" target="_blank" class="btn btn-secondary">LinkedIn</a>
-                    <a href="https://x.com/Tongrongtian" target="_blank" class="btn btn-secondary">X (Twitter)</a>
+                    <a href="https://x.com/Tongrongtian" target="_blank" class="btn btn-secondary">X</a>
                     <a href="mailto:your.email@uw.edu" class="btn btn-secondary">Email</a>
                 </div>
 
                 <div class="focus-section">
-                    <div class="section-label">Focus</div>
+                    <div class="section-label">Academic Research Areas</div>
                     <div class="focus-tags">
-                        <span class="tag">cross-cultural</span>
-                        <span class="tag">psychology</span>
-                        <span class="tag">communication</span>
-                        <span class="tag">international studies</span>
-                    </div>
-                </div>
-
-                <div class="focus-section">
-                    <div class="section-label">Methods</div>
-                    <div class="focus-tags">
-                        <span class="tag">experiments</span>
-                        <span class="tag">surveys</span>
-                        <span class="tag">qualitative research</span>
+                        <span class="tag">culture</span>
+                        <span class="tag">acculturation</span>
+                        <span class="tag">migration</span>
+                        <span class="tag">international relations</span>
                     </div>
                 </div>
             </div>
